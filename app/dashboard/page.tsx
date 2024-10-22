@@ -1,5 +1,7 @@
 
 import type { Metadata } from 'next'
+import PageContent from '@/components/PageContent'
+import PageHeader from '@/components/PageHeader'
 
 export const metadata: Metadata = {
   title: 'Dashboard',
@@ -7,8 +9,13 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello! Dashboard page
-    </h1>
+    <>
+      <PageHeader>Dashboard</PageHeader>
+      <PageContent>
+        <p className="text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+          Welcome to the dashboard!
+        </p>
+      </PageContent>
+    </>
   )
 }
